@@ -11,12 +11,12 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
   accessToken: API_KEY
 }).addTo(myMap);
 
-var url =  "https://s3.us-east-2.amazonaws.com/tsundbucket/samp.geojson";
+var url =  "static/data/holdingout.csv";
 //var limit = "&$limit=10000";
 
 //var url = baseURL + limit;
 
-d3.json(url, function(response) {
+d3.csv(url, function(response) {
 
   console.log(response);
 
