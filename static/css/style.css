@@ -7,9 +7,14 @@ footer {
     color: rgba(255,255,255,.5);
 }
 
-.trail {
+/* SVG show and size */
+.splatterBox {
+    height: 500px;
+    width: 500px;
+}
+
+.splatter {
     position: absolute;
-    height: 6px; width: 6px;
     border-radius: 3px;
     background: rgb(160, 12, 12);
   }
