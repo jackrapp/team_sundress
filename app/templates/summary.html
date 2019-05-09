@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Don't Stay Inside</title>
+    <!-- JQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+    <!-- Load in Navbar, Header and Footer -->
+    <script> 
+        $(function(){
+          $("#navbar").load("/navbar"); 
+          $("#footer").load("/footer"); 
+        });
+    </script> 
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static' , filename='css/style.css') }}">
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <div id="container">
+        <div id="row">
+            <!-- Summary/Journal -->
+            <div id="col-lg-8">
+                <h2>Heatmap Crime by Type</h2>
+                <div id="heatmap"></div>
+            </div>
+                <!-- collapse when med screen? -->
+            <div id='col-lg-4'>
+                <!-- List of languages used -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Resources</h5>
+                        <p class="card-text">Links to libraries used to generate dashboard, read in data and create our visualizations.</p>
+                        <a href="#" class="btn btn-primary">Journal link</a>
+                    </div>
+                        <div class="list-group list-group-flush">
+                            <a href="https://api.jquery.com" class="list-group-item list-group-item-action">jQuery</a>
+                            <a href="https://github.com/d3/d3/wiki" class="list-group-item list-group-item-action">D3</a>
+                            <a href="https://dash.plot.ly" class="list-group-item list-group-item-action">Dash</a>
+                            <a href="http://geopandas.org" class="list-group-item list-group-item-action">Geopandas</a>
+                        </div>
+                </div> <!-- /card -->
+
+            </div>
+        </div> <!-- /row -->
+    </div> <!-- /container -->
+    
+    <!-- Footer inserted here -->
+    <div id="footer"></div>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Blood Splatter -->
+    <script type="text/javascript" src="{{ url_for('static' , filename='js//splatter.js') }}"></script>
+</body>
+</html>

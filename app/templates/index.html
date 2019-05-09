@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Don't Go Outside</title>
+    <!-- JQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+    <!-- Load in Navbar, Header and Footer -->
+    <script> 
+        $(function(){
+          $("#navbar").load("/navbar"); 
+          $("#footer").load("/footer"); 
+        });
+    </script> 
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static' , filename='css/style.css') }}">
+</head>
+
+<body>
+    <div id="navbar"></div>
+    
+    <!-- Main html body -->
+    <div class="container-fluid" id="pageBody">
+        <div class="row">
+            <div class="col-12 col-md-9" id='map'>
+                <!-- Insert Map here -->
+                    <h2>Chicago Crimes by Police District 2011-Present</h2>
+                    <h4>Chloropleth Map</h4><hr>
+                    <p>Tooltip with location name and number</p>   
+            </div>
+            <div class="col-6 col-md-3">
+                <!-- Project Description -->
+                <h2>Project Fearmonger</h2>
+                <p>Ever felt like going outside? Don't. Felt like staying in? Bad idea. 
+                    Crime is everywhere. See how crimes vary by time of day, day of the week, month
+                    and location using the city of Chicago's own crime data.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- D3 Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+
+    <!-- Blood splatter -->
+    <script type="text/javascript" src="{{ url_for('static' , filename='js//splatter.js') }}"></script>
+</body>
+</html>

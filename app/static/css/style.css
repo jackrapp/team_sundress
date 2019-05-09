@@ -1,0 +1,20 @@
+body {
+    padding-top: 70px;
+    background-color:  rgba(255,255,255,.5);
+}
+
+footer {
+    color: rgba(255,255,255,.5);
+}
+
+/* SVG show and size */
+.splatterBox {
+    height: 200px;
+    width: 200px;
+}
+
+.splatter {
+    position: absolute;
+    border-radius: 3px;
+    background: rgb(160, 12, 12);
+  }
