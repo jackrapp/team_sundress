@@ -1,6 +1,6 @@
 var myMap = L.map("map", {
   center: [41.8781, -87.6298],
-  zoom: 13
+  zoom: 10
 });
 
 // Adding tile layer to the map
@@ -11,13 +11,13 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
   accessToken: API_KEY
 }).addTo(myMap);
 
-var url =  "static/data/holdingout.csv";
+var url =  "https://s3.us-east-2.amazonaws.com/tsundbucket/L5T5CrimeGeoJson.geojson";
 //var limit = "&$limit=10000";
 
 //var url = baseURL + limit;
 
-d3.csv(url, function(response) {
-
+d3.json(url, function(data) {
+  var response = data.features;
   console.log(response);
 
   var heatArray = [];
@@ -31,15 +31,16 @@ d3.csv(url, function(response) {
   
   var batteryIcon = new CrimeTypeIcon({iconUrl: '../images/battery2.png'}),
     theftIcon = new CrimeTypeIcon({iconUrl: '../images/theft1.png'}),
-    criminal_damageIcon = new CrimeTypeIcon({iconUrl: '../images/criminal_damage.png'})
-    assaultIcon = new CrimeTypeIcon({iconUrl: '../images/assault.png'}),
+    murderIcon = new CrimeTypeIcon({iconUrl: '../images/murder.png'}),
+    criminal_damageIcon = new CrimeTypeIcon({iconUrl: '../images/motor_vehicle_theft.png'})
+    assaultIcon = new CrimeTypeIcon({iconUrl: '../images/gun2.png'}),
     other_offenseIcon = new CrimeTypeIcon({iconUrl: '../images/other_offense.png'}),
     narcoticIcon = new CrimeTypeIcon({iconUrl: '../images/narcotics1.png'}),
     deceptive_practiceIcon = new CrimeTypeIcon({iconUrl: '../images/deceptive_practice.png'}),
     motor_vehicleIcon = new CrimeTypeIcon({iconUrl: '../images/motor_vehicle_theft.png'}),
-    burglaryIcon = new CrimeTypeIcon({iconUrl: '../images/theft1.png'}),
+    burglaryIcon = new CrimeTypeIcon({iconUrl: '../images/robber3.png'}),
     weaponsIcon = new CrimeTypeIcon({iconUrl: '../images/gun2.png'}),
-    robberyIcon = new CrimeTypeIcon({iconUrl: '../images/theft1.png'}),
+    robberyIcon = new CrimeTypeIcon({iconUrl: '../images/robber3.png'}),
     everythingElseIcon = new CrimeTypeIcon({iconUrl: '../images/other_offense2.png'})
     ;
     
@@ -49,6 +50,8 @@ d3.csv(url, function(response) {
               return batteryIcon;
             case ("THEFT"):
               return theftIcon;
+            case ("HOMICIDE"):
+              return murderIcon;
             case ("CRIMINAL DAMAGE"):
               return criminal_damageIcon;
             case ("ASSAULT"):
@@ -78,13 +81,13 @@ d3.csv(url, function(response) {
 
 
   for (var i = 0; i < response.length; i++) {
-    var latitude = response[i].Latitude;
-    var longitude = response[i].Longitude;
+    var latitude = response[i].geometry.coordinates[1];
+    var longitude = response[i].geometry.coordinates[0];
 
     if (latitude!=null && longitude!=null) {
       heatArray.push([+latitude, +longitude]);
       //add icon to map
-      var primary_type = response[i]["Primary Type"];
+      var primary_type = response[i].properties["Primary Type"];
       if (primary_type!=null) {
         var testicon = chooseIcon(primary_type);
       

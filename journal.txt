@@ -1,0 +1,14 @@
+Day 1: The Plan - We decided to revisit our first project "Chicago Crime" with the goal of redeemimg ourselves.
+Deciding visualizations was no brainer because any visualization we come with that can be completed with accuracy
+is better than what we present the first time. My assignment is to create a heat map so I used this opportunity to 
+redo some of our class lessons.
+
+Day 2: found some fum custom icons images to represent types of crime. I wrote my javascript code. 
+Try to run and it failed over and over and over again. The end.
+
+Day 3: The struggle is real and swear words are flying. Time to call a TA.
+
+Day 4: Now I'm cooking with gas. The biggest challenge today is data is too big. program keeps crashing. 
+        Data now has been paired down to top 5 crimes. Now it finally runs without timing out.
+
+Day 5: added favicon played with zoom. Completed and ready to show off!
