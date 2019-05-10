@@ -1,0 +1,48 @@
+Day 1 - Tuesday 4/30
+    I started out thinking of predictive policing - if you can see which areas have a lot of crime,
+    you can assign more officers to those areas to reduce crime. But after talking it over with TA
+    dreamcrusher we realized the self-preptuating cycle that would create - more police to see more
+    crimes occuring meaning more crimes then more police etc.
+
+    So instead of trying to create a model that would allocate police resources based on crime levels,
+    we decided to do a more exploratory analysis. What kinds of predictions can we make with the data,
+    what kinds of feature engineering can we do that will allow us to correctly predict crime? Can we
+    create a model that will let you know, based on the time of day, if it is safe to be in an
+    apartment building in Chicago? Should you be more worried about theft, battery or criminal damage
+    if you're in an alley at 2 pm on the first Tuesday of the month?
+
+Day 2 - Thursday 5/2
+    To start the project I am getting the HTML and CSS going - we want to make sure we have
+    a baseline to work up from. I have figured out how to use HTML templates with JQuery - much 
+    easier to change a navbar/footer once than on every single page.
+
+Day 3 - Saturday 5/5
+    I have the shell of the website done and I'm having fun adding some dramatic blood splatter using
+    D3 and CSS. What kind of crime anaylsis doesn't have it's fair share of fearmongering? The most
+    difficult part was figuring out how to position the splatters - their position is relative to the
+    SVG container they are in, not the position of the mouse click on the page.
+
+Day 4 - Tuesday 5/7
+    Maria and Nate have working code for the map and Dash visualizations using a fraction of the
+    dataset. Our current roadblock is that Dash and leaflet are not meant to handle this large of
+    a dataset, so we are brainstorming which features to exclude and how much data to pull into the
+    visualizations.
+
+    Working on getting a flask and dash app together. There are a lot of questions about this online, 
+    looks like the Dash developers are aware of this as an issue and are trying to make it more
+    straightforward in the future. Simplified the code using Blueprints to separate the server code 
+    and the routes. Spent a lot of time breaking the code into sections for readability and side-by-side editing. 
+
+Day 6 - Thursday 5/9
+    Finally getting into the machine learning and feature engineering - setting up the website and
+    working with Flask always seems to take much longer than I would like but we wanted to be able
+    to have all of our visualizations together ASAP, allowing us to investigate the machine learning
+    and do minor changes while not having to stress about getting a presentable application up and 
+    running.
+
+    Working on the machine learning, and spent most of the class figuring out which approach to take.
+    We are going to start by clustering the data geographically and then running Random Forest Models 
+    on the individual clusters. 
+    
+    Quote of the night from our favorite dreamcrushing TA - 'Random Forest Classifier: 
+    The honeybadger of the models - Random Forest doesn't give a fuck'
