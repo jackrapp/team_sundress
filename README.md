@@ -8,11 +8,11 @@ Jackie Rapp, Nathan Mitch and Maria Sorensen
 Is crime related to population?
 where (p) is the Probability of (c) Crime increase
 If crime IS related to population count
-Then the incidence of crime (Total Population / Count of Incidence) between 2012-2015 in the city of Chicago will be higher when population increases
+Then the incidence of crime (Total Population / Count of Incidence) in the city of Chicago will be higher when population increases
 
 If crime IS NOT related to population count
 Then crimes incidences will be equal to or lower if population increases
-This dataset reflects reported incidents of crime that occurred in the City of Chicago from 2012 to 2015 along with National Census data
+This dataset reflects reported incidents of crime that occurred in the City of Chicago along with National Census data
 
 ### Analysis
 * Most of these updated  Chicago crimes happened in the Chicago Northside area  
