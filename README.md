@@ -1,7 +1,7 @@
 ## Team Members:
 Jackie Rapp, Nathan Mitch and Maria Sorensen
 # Chicago Crime
-![Image of MovieRentals](../master/images/crimeScene.jpg)
+![Image of Crime Scene tape](../MariaS/images/crimeScene.jpg)
 ### The correlation between crime and population in the city of Chicago. 
 
 #### Maps using leaflet.js, machine learning using keras and scikit-learn, javascript to examine:
