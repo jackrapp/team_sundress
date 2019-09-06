@@ -3,7 +3,7 @@ Deciding visualizations was no brainer because any visualization we come with th
 is better than what we present the first time. My assignment is to create a heat map so I used this opportunity to 
 redo some of our class lessons.
 
-Day 2: found some fum custom icons images to represent types of crime. I wrote my javascript code. 
+Day 2: found some fun custom icons images to represent types of crime. I wrote my javascript code. 
 Try to run and it failed over and over and over again. The end.
 
 Day 3: The struggle is real and swear words are flying. Time to call a TA.
